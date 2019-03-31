@@ -1,0 +1,8 @@
+language: python
+python: 3.6
+
+install:
+  - python -m pip install pip wheel setuptools numpy pytest -U
+
+script:
+  - python setup.py develop
