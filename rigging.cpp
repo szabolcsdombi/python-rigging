@@ -114,7 +114,7 @@ PyObject * meth_skin(PyObject * self, PyObject * args, PyObject * kwargs) {
             if (!PyArg_ParseTuple(rotation, "ffff", &quat.x, &quat.y, &quat.z, &quat.w)) {
                 return 0;
             }
-            transforms[i].rotation = glm::mat3(glm::inverse(quat));
+            transforms[i].rotation = glm::mat3_cast(glm::inverse(quat));
         }
     }
     Py_DECREF(bones);
